@@ -1,20 +1,11 @@
 version: 0.2
 
 phases:
-  pre_build:
-    commands:
-      - echo "Pre-build phase: Execute commands before the build"
-      - # Add any pre-build commands if needed
-
   build:
     commands:
-      - echo "Build phase: Execute your build commands here"
-      - # Add your build commands, e.g., compiling code, running tests, etc.
-
-  post_build:
-    commands:
-      - echo "Post-build phase: Execute commands after the build"
-      - # Add any post-build commands if needed
+      - echo "Build phase: Installing dependencies and building the Node.js application"
+      - npm install  # Install Node.js dependencies
+      - npm run build  # Build the application (adjust the npm script as needed)
 
 artifacts:
   files:
